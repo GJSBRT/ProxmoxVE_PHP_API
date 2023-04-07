@@ -86,6 +86,10 @@ class Request
         throw new ProxmoxException('Request params empty');
       }
 
+      if ($response->data === NULL) {
+        throw new ProxmoxException('Invalid credentials');
+      }
+
       // set header
       self::$Client->setHeader('CSRFPreventionToken', $response->data->CSRFPreventionToken);
       // set cookie
