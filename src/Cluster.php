@@ -370,7 +370,7 @@ class Cluster
     * Create HA resources.
     * GET /api2/json/cluster/ha/resources
   */
-  public static function createHaResources($data)
+  public static function createHaResource($data)
   {
       return Request::Request("/cluster/ha/resources", $data, "POST");
   }

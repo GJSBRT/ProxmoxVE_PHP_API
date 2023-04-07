@@ -342,6 +342,7 @@ Cluster::firewallListRefs()
 Cluster::getHaGroups()
 Cluster::HaGroups($group)
 Cluster::HaResources()
+Cluster::createHaResource()
 ```
 
 ## Replication
