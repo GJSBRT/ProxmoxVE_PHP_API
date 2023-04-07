@@ -1,5 +1,5 @@
 {
-    "name": "saleh7/proxmox-ve_php_api",
+    "name": "gjsbrt/proxmox-ve_php_api",
     "type": "library",
     "description": "ProxmoxVE PHP API",
     "keywords": ["Proxmox", "API", "PHP", "PVE"],
