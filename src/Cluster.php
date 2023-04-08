@@ -368,12 +368,23 @@ class Cluster
   }
   /**
     * Create HA resource.
-    * GET /api2/json/cluster/ha/resources
+    * POST /api2/json/cluster/ha/resources
     * @param array    $data
   */
   public static function createHaResource($data)
   {
       return Request::Request("/cluster/ha/resources", $data, "POST");
+  }
+
+  /**
+    * Get HA resource.
+    * GET /api2/json/cluster/ha/resources/{sid}
+    * @param string $sid HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100).
+    * @param array $data
+  */
+  public static function getHaResource($sid)
+  {
+      return Request::Request("/cluster/ha/resources/{$sid}", null, "PUT");
   }
 
   /**
