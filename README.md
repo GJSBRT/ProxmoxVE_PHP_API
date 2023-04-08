@@ -2,6 +2,8 @@
 
 # ProxmoxVE PHP API
 
+This is a updated version of Saleh7's ProxmoxVE_PHP_API. When using this libary you are going to need the [Proxmox Documentation](https://pve.proxmox.com/pve-docs/api-viewer/index.html) for request bodies.
+
 ## Table of Contents
 - [ProxmoxVE PHP API](#proxmoxve-php-api)
   - [Table of Contents](#table-of-contents)
@@ -343,6 +345,10 @@ Cluster::getHaGroups()
 Cluster::HaGroups($group)
 Cluster::HaResources()
 Cluster::createHaResource()
+Cluster::updateHaResource($sid, $data = array())
+Cluster::deleteHaResource($sid)
+Cluster::migrateHaResource($sid, $data = array())
+Cluster::relocateHaResource($sid, $data = array())
 ```
 
 ## Replication

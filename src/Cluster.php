@@ -367,16 +367,61 @@ class Cluster
       return Request::Request("/cluster/ha/resources");
   }
   /**
-    * Create HA resources.
+    * Create HA resource.
     * GET /api2/json/cluster/ha/resources
+    * @param array    $data
   */
   public static function createHaResource($data)
   {
       return Request::Request("/cluster/ha/resources", $data, "POST");
   }
+
   /**
-    * List HA resources.
-    * GET /api2/json/cluster/ha/resources
+    * Update HA resource.
+    * PUT /api2/json/cluster/ha/resources/{sid}
+    * @param string $sid HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100).
+    * @param array $data
+  */
+  public static function updateHaResource($sid, $data)
+  {
+      return Request::Request("/cluster/ha/resources/{$sid}", $data, "PUT");
+  }
+  
+  /**
+    * Delete HA resource.
+    * DELETE /api2/json/cluster/ha/resources/{sid}
+    * @param string $sid HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100).
+  */
+  public static function deleteHaResource($sid)
+  {
+      return Request::Request("/cluster/ha/resources/{$sid}", null, "DELETE");
+  }
+  
+  /**
+    * Request resource migration (online) to another node.
+    * POST /api2/json/cluster/ha/resources/{sid}/migrate
+    * @param string $sid HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100).
+    * @param array $data
+  */
+  public static function migrateHaResource($sid, $data)
+  {
+      return Request::Request("/cluster/ha/resources/{$sid}/migrate", $data, "POST");
+  }
+
+  /**
+    * Request resource relocatzion to another node. This stops the service on the old node, and restarts it on the target node.
+    * POST /api2/json/cluster/ha/resources/{sid}/relocate
+    * @param string $sid HA resource ID. This consists of a resource type followed by a resource specific name, separated with colon (example: vm:100 / ct:100).
+    * @param array $data
+  */
+  public static function relocateHaResource($sid, $data)
+  {
+      return Request::Request("/cluster/ha/resources/{$sid}/relocate", $data, "POST");
+  }
+
+  /**
+    * List replication jobs.
+    * GET /api2/json/cluster/replication
   */
   public static function Replication()
   {
@@ -384,7 +429,7 @@ class Cluster
   }
   /**
     * Create a new replication job
-    * POST /api2/json/cluster/ha/resources
+    * POST /api2/json/cluster/replication
     * @param array    $data
   */
   public static function createReplication($data = array())
