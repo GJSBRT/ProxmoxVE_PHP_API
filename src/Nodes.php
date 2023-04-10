@@ -1532,7 +1532,7 @@ class Nodes
       return Request::Request("/nodes/$node/qemu/$vmid/status/start", $data, 'POST');
   }
   /**
-    * Stop virtual machine. The qemu process will exit immediately. Thisis akin to pulling the power plug of a running computer and may damage the VM data
+    * Stop virtual machine. The qemu process will exit immediately. This is similar to pulling the power plug of a running computer and may damage the VM data
     * POST /api2/json/nodes/{node}/qemu/{vmid}/status/stop
     * @param string   $node    The cluster node name.
     * @param integer  $vmid    The (unique) ID of the VM.
@@ -1554,7 +1554,7 @@ class Nodes
       return Request::Request("/nodes/$node/qemu/$vmid/status/reboot", $data, 'POST');
   }
   /**
-    * Suspend the  virtual machine.
+    * Suspend the virtual machine.
     * POST /api2/json/nodes/{node}/qemu/{vmid}/status/suspend
     * @param string   $node    The cluster node name.
     * @param integer  $vmid    The (unique) ID of the VM.
@@ -1630,7 +1630,7 @@ class Nodes
       return Request::Request("/nodes/$node/qemu/$vmid/config", $data, 'POST');
   }
   /**
-    * Set virtual machine options (synchrounous API) - You should consider using the POST method instead for any actions involving hotplug or storage allocation.
+    * Set virtual machine options (synchrounous API) - You should consider using the createQemuConfig (POST) method instead for any actions involving hotplug or storage allocation.
     * PUT /api2/json/nodes/{node}/qemu/{vmid}/config
     * @param string   $node    The cluster node name.
     * @param integer  $vmid    The (unique) ID of the VM.
@@ -1786,7 +1786,7 @@ class Nodes
       return Request::Request("/nodes/$node/qemu/$vmid/vncproxy", $data, 'POST');
   }
   /**
-    * Opens a weksocket for VNC traffic.
+    * Opens a websocket for VNC traffic.
     * GET /api2/json/nodes/{node}/qemu/{vmid}/vncwebsocket
     * @param string   $node    The cluster node name.
     * @param integer  $vmid    The (unique) ID of the VM.

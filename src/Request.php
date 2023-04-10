@@ -9,8 +9,6 @@
 
 namespace Proxmox;
 
-use \Curl\Curl;
-
 class Request
 {
   protected static $hostname;
@@ -26,6 +24,8 @@ class Request
   /**
    * Proxmox Api client
    * @param array $configure   hostname, username, password, realm, port
+   * @param bool $verifySSL    verify SSL certificate
+   * @param bool $verifyHost   verify SSL host
    */
   public static function Login(array $configure, $verifySSL = false, $verifyHost = false)
   {
@@ -63,7 +63,9 @@ class Request
     self::$Client = new \Curl\Curl();
     self::$Client->setOpts([
       CURLOPT_SSL_VERIFYPEER => $verifySSL,
-      CURLOPT_SSL_VERIFYHOST => $verifyHost
+      CURLOPT_SSL_VERIFYHOST => $verifyHost,
+      CURLOPT_CONNECTTIMEOUT => 5,
+      CURLOPT_TIMEOUT => 5
     ]);
 
     if (self::$token_name && self::$token_value) {
