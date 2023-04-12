@@ -538,4 +538,303 @@ class Cluster
   {
       return Request::Request("/cluster/tasks");
   }
+  
+  /* SDN Controllers */
+  /**
+    * SDN controllers index.
+    * GET /api2/json/cluster/sdn/controllers
+  */
+  public static function getControllers()
+  {
+      return Request::Request("/cluster/sdn/controllers");
+  }
+    
+  /**
+    * Create a new sdn controller object.
+    * POST /api2/json/cluster/sdn/controllers/{id}
+  */
+  public static function createController($data = array())
+  {
+      return Request::Request("/cluster/sdn/controllers/", $data, "POST");
+  }
+
+  /**
+    * Read sdn controller configuration.
+    * GET /api2/json/cluster/sdn/controllers/{id}
+    * @param integer $id The (unique) ID of the controller.
+  */
+  public static function getController($id)
+  {
+      return Request::Request("/cluster/sdn/controllers/{$id}");
+  }
+  
+  /**
+    * Update sdn controller object configuration.
+    * PUT /api2/json/cluster/sdn/controllers/{id}
+    * @param integer $id The (unique) ID of the controller.
+  */
+  public static function updateController($id, $data = array())
+  {
+      return Request::Request("/cluster/sdn/controllers/{$id}", $data, "PUT");
+  }
+  
+  /**
+    * Update sdn controller object configuration.
+    * PUT /api2/json/cluster/sdn/controllers/{id}
+    * @param integer $id The (unique) ID of the controller.
+  */
+  public static function deleteController($id)
+  {
+      return Request::Request("/cluster/sdn/controllers/{$id}", null, "DELETE");
+  }
+
+  /* SDN DNS */
+  /**
+    * SDN dns index.
+    * GET /api2/json/cluster/sdn/dns
+  */
+  public static function getDNSs()
+  {
+      return Request::Request("/cluster/sdn/dns");
+  }
+    
+  /**
+    * Create a new sdn dns object.
+    * POST /api2/json/cluster/sdn/dns/{id}
+  */
+  public static function createDNS($data = array())
+  {
+      return Request::Request("/cluster/sdn/dns", $data, "POST");
+  }
+
+  /**
+    * Read sdn dns configuration.
+    * GET /api2/json/cluster/sdn/dns/{id}
+    * @param integer $id The (unique) ID of the dns.
+  */
+  public static function getDNS($id)
+  {
+      return Request::Request("/cluster/sdn/dns/{$id}");
+  }
+  
+  /**
+    * Update sdn dns object configuration.
+    * PUT /api2/json/cluster/sdn/dns/{id}
+    * @param integer $id The (unique) ID of the dns.
+  */
+  public static function updateDNS($id, $data = array())
+  {
+      return Request::Request("/cluster/sdn/dns/{$id}", $data, "PUT");
+  }
+  
+  /**
+    * Delete sdn dns object configuration.
+    * PUT /api2/json/cluster/sdn/dns/{id}
+    * @param integer $id The (unique) ID of the dns.
+  */
+  public static function deleteDNS($id)
+  {
+      return Request::Request("/cluster/sdn/dns/{$id}", null, "DELETE");
+  }
+
+  /* SDN IPAMS */
+  /**
+    * SDN ipams index.
+    * GET /api2/json/cluster/sdn/ipams
+  */
+  public static function getIPAMs()
+  {
+      return Request::Request("/cluster/sdn/ipams");
+  }
+    
+  /**
+    * Create a new sdn ipam object.
+    * POST /api2/json/cluster/sdn/ipams/{id}
+  */
+  public static function createIPAM($data = array())
+  {
+      return Request::Request("/cluster/sdn/ipams", $data, "POST");
+  }
+
+  /**
+    * Read sdn ipam configuration.
+    * GET /api2/json/cluster/sdn/ipams/{id}
+    * @param integer $id The (unique) ID of the ipam.
+  */
+  public static function getIPAM($id)
+  {
+      return Request::Request("/cluster/sdn/ipams/{$id}");
+  }
+  
+  /**
+    * Update sdn ipam object configuration.
+    * PUT /api2/json/cluster/sdn/ipams/{id}
+    * @param integer $id The (unique) ID of the ipam.
+  */
+  public static function updateIPAM($id, $data = array())
+  {
+      return Request::Request("/cluster/sdn/ipams/{$id}", $data, "PUT");
+  }
+  
+  /**
+    * Delete sdn ipam object configuration.
+    * PUT /api2/json/cluster/sdn/ipams/{id}
+    * @param integer $id The (unique) ID of the ipam.
+  */
+  public static function deleteIPAM($id)
+  {
+      return Request::Request("/cluster/sdn/ipams/{$id}", null, "DELETE");
+  }
+
+  /* SDN vNets */
+  /**
+    * SDN vnets index.
+    * GET /api2/json/cluster/sdn/vnets
+  */
+  public static function getvNets()
+  {
+      return Request::Request("/cluster/sdn/vnets");
+  }
+    
+  /**
+    * Create a new sdn vnet object.
+    * POST /api2/json/cluster/sdn/vnets/{id}
+  */
+  public static function createvNet($data = array())
+  {
+      return Request::Request("/cluster/sdn/vnets", $data, "POST");
+  }
+
+  /**
+    * Read sdn vnet configuration.
+    * GET /api2/json/cluster/sdn/vnets/{id}
+    * @param integer $id The (unique) ID of the vnet.
+  */
+  public static function getvNet($id)
+  {
+      return Request::Request("/cluster/sdn/vnets/{$id}");
+  }
+  
+  /**
+    * Update sdn vnet object configuration.
+    * PUT /api2/json/cluster/sdn/vnets/{id}
+    * @param integer $id The (unique) ID of the vnet.
+  */
+  public static function updatevNet($id, $data = array())
+  {
+      return Request::Request("/cluster/sdn/vnets/{$id}", $data, "PUT");
+  }
+  
+  /**
+    * Delete sdn vnet object configuration.
+    * PUT /api2/json/cluster/sdn/vnets/{id}
+    * @param integer $id The (unique) ID of the vnet.
+  */
+  public static function deletevNet($id)
+  {
+      return Request::Request("/cluster/sdn/vnets/{$id}", null, "DELETE");
+  }
+
+  /* SDN subnets */
+  /**
+    * SDN subnets index.
+    * GET /api2/json/cluster/sdn/vnets/subnets
+    * @param integer $vnet The (unique) ID of the vnet.
+  */
+  public static function getSubnets($vnet)
+  {
+      return Request::Request("/cluster/sdn/vnets/{$vnet}/subnets");
+  }
+    
+  /**
+    * Create a new sdn vnet object.
+    * POST /api2/json/cluster/sdn/vnets/{id}/subnets
+    * @param integer $vnet The (unique) ID of the vnet.
+  */
+  public static function createSubnet($vnet, $data = array())
+  {
+      return Request::Request("/cluster/sdn/vnets/{$vnet}/subnets", $data, "POST");
+  }
+
+  /**
+    * Read sdn subnet configuration.
+    * GET /api2/json/cluster/sdn/vnets/{id}/subnets/{$subnet}
+    * @param integer $vnet The (unique) ID of the vnet.
+    * @param integer $subnet The (unique) ID of the subnet.
+  */
+  public static function getSubnet($vnet, $subnet)
+  {
+      return Request::Request("/cluster/sdn/vnets/{$vnet}/subnets/{$subnet}");
+  }
+  
+  /**
+    * Update sdn subnet object configuration.
+    * PUT /api2/json/cluster/sdn/vnets/{id}/subnets/{$subnet}
+    * @param integer $vnet The (unique) ID of the vnet.
+    * @param integer $subnet The (unique) ID of the subnet.
+  */
+  public static function updateSubnet($vnet, $subnet, $data = array())
+  {
+      return Request::Request("/cluster/sdn/vnets/{$vnet}/subnets/{$subnet}", $data, "PUT");
+  }
+  
+  /**
+    * Delete sdn subnet object configuration.
+    * PUT /api2/json/cluster/sdn/vnets/{id}/subnets/{$subnet}
+    * @param integer $vnet The (unique) ID of the vnet.
+    * @param integer $subnet The (unique) ID of the subnet.
+  */
+  public static function deleteSubnet($vnet, $subnet)
+  {
+      return Request::Request("/cluster/sdn/vnets/{$vnet}/subnets/{$subnet}", null, "DELETE");
+  }
+
+  /* SDN Zones */
+  /**
+    * SDN zones index.
+    * GET /api2/json/cluster/sdn/zones
+  */
+  public static function getZones()
+  {
+      return Request::Request("/cluster/sdn/zones");
+  }
+    
+  /**
+    * Create a new sdn zone object.
+    * POST /api2/json/cluster/sdn/zones/{id}
+  */
+  public static function createZone($data = array())
+  {
+      return Request::Request("/cluster/sdn/zones", $data, "POST");
+  }
+
+  /**
+    * Read sdn zone configuration.
+    * GET /api2/json/cluster/sdn/zones/{id}
+    * @param integer $id The (unique) ID of the zone.
+  */
+  public static function getZone($id)
+  {
+      return Request::Request("/cluster/sdn/zones/{$id}");
+  }
+  
+  /**
+    * Update sdn zone object configuration.
+    * PUT /api2/json/cluster/sdn/zones/{id}
+    * @param integer $id The (unique) ID of the zone.
+  */
+  public static function updateZone($id, $data = array())
+  {
+      return Request::Request("/cluster/sdn/zones/{$id}", $data, "PUT");
+  }
+  
+  /**
+    * Delete sdn zone object configuration.
+    * PUT /api2/json/cluster/sdn/zones/{id}
+    * @param integer $id The (unique) ID of the zone.
+  */
+  public static function deleteZone($id)
+  {
+      return Request::Request("/cluster/sdn/zones/{$id}", null, "DELETE");
+  }
 }

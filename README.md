@@ -45,6 +45,7 @@ This is a updated version of Saleh7's ProxmoxVE_PHP_API. When using this libary 
   - [Nodes Storage](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/nodes-storage)
   - [Tasks](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/tasks)
   - [Vzdump](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/vzdump)
+  - [SDN](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/sdn)
 
 ## Contributing
 This library does not contain the whole Proxmox API anymore. If you are missing an API call, feel free to add it and submit a PR.
