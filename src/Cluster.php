@@ -688,6 +688,25 @@ class Cluster
 
   /* SDN vNets */
   /**
+    * Directory index.
+    * GET /api2/json/cluster/sdn
+  */
+  public static function getSDN()
+  {
+      return Request::Request("/cluster/sdn");
+  }
+  
+  /**
+    * Apply sdn controller changes && reload.
+    * PUT /api2/json/cluster/sdn
+    * @param integer $id The (unique) ID of the vnet.
+  */
+  public static function updateSDN()
+  {
+      return Request::Request("/cluster/sdn", null, "PUT");
+  }
+
+  /**
     * SDN vnets index.
     * GET /api2/json/cluster/sdn/vnets
   */
