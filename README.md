@@ -4,6 +4,13 @@
 
 This is a updated version of Saleh7's ProxmoxVE_PHP_API. When using this libary you are going to need the [Proxmox Documentation](https://pve.proxmox.com/pve-docs/api-viewer/index.html) for request bodies.
 
+## Installation
+To install ProxmoxVE_PHP_API, simply:
+
+```bash
+composer require gjsbrt/proxmox-ve_php_api
+```
+
 ## Table of Contents
 - [ProxmoxVE PHP API](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/proxmoxve-php-api)
   - [Table of Contents](https://github.com/GJSBRT/ProxmoxVE_PHP_API/wiki/table-of-contents)
@@ -49,10 +56,3 @@ This is a updated version of Saleh7's ProxmoxVE_PHP_API. When using this libary 
 
 ## Contributing
 This library does not contain the whole Proxmox API anymore. If you are missing an API call, feel free to add it and submit a PR.
-
-## Installation
-To install ProxmoxVE_PHP_API, simply:
-
-```bash
-composer require gjsbrt/proxmox-ve_php_api
-```
